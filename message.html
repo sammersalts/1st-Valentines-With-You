@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./message_style.css">
+    <style>
+        /* Floating hearts container */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* Individual heart */
+        .heart {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            color: #ff69b4;
+            opacity: 0.8;
+            animation: floatUp 5s linear infinite;
+        }
+
+        /* Keyframes for floating hearts */
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Generating multiple hearts */
+        .heart:nth-child(1) { left: 10%; animation-duration: 4s; }
+        .heart:nth-child(2) { left: 30%; animation-duration: 5s; }
+        .heart:nth-child(3) { left: 50%; animation-duration: 6s; }
+        .heart:nth-child(4) { left: 70%; animation-duration: 4.5s; }
+        .heart:nth-child(5) { left: 90%; animation-duration: 5.5s; }
+    </style>
+</head> 
+<body>
+    <div class="hearts-container">
+        <div class="heart">❤️</div>
+        <div class="heart">💖</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💓</div>
+    </div>
+
+    <div class="message_container">
+        <h1 class="message_title">For my babie</h1>
+
+        <!-- SoundCloud Embed placed between the title and message -->
+        <iframe width="100%" height="166" 
+            scrolling="no" frameborder="no" 
+            allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/laufeylin/bewitched&color=%23ff5500&auto_play=true&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+
+        <p class="message_text">
+            I didn’t stumble into you. It wasn’t love at first sight, no grand epiphany, no world-tilting moment. It wasn’t sudden, wasn’t overwhelming. It was quieter than that. Softer. Like recognition.<br><br>
+            Like oh. It’s you. Of course, it’s you. I don’t know how I knew—only that I did. That from the moment we spoke, there was no awkwardness, no hesitation, just the easy kind of knowing. Like flipping to the right page without meaning to. Like hearing a song for the first time and already knowing the melody.<br><br>
+            I wasn’t looking, wasn’t waiting, wasn’t hoping. But then you arrived. Slowly, then all at once. And now, the world feels different. Brighter. Less predictable, less empty.<br><br>
+            I chose this. I chose you. The late-night conversations, the teasing, the silences that somehow feel louder than words. I chose the way your energy shifts when you think I’m losing interest, the way your voice softens when you’re trying not to show you care too much. I chose the laughter, the stubbornness, the way you frustrate me. Still, I chose to stay, even when you made things difficult with your spoiled, cynical attempts to shut me out.<br><br>
+            And I don’t know what kind of magic this is, how a voice from a screen, a name on my phone, could feel like something real—something that lingers, something I catch myself holding onto when I should be sleeping. You talk, and I listen, bewitched, bothered, bewildered, but always willingly. Happily.<br><br>
+            I used to think love had to be loud, had to be certain, had to be a grand, sweeping thing. But then you. And now I know better.<br><br>
+            So today, when the world dresses itself in pinks and reds, when love is measured in roses and candlelit dinners, I find myself wanting none of it. Just you and the way you make my world feel less lonely, the way your words fill the spaces I didn’t even know were empty.<br><br>
+            And if this is love, this quiet, yet somehow chaotic kind that doesn’t need grand declarations to mean something, then I want it. I want you. Not just today, not just when love feels easy, but always.<br><br>
+            I don’t know if I believe in fate. Maybe the universe had a hand in this, maybe it didn’t. But if I were given a hundred lifetimes, a hundred chances to do this over, I’d still find you. I’d still choose you. In every version of my life, in every world where we exist—always, always you.
+        </p>
+    </div>
+</body> 
+</html>

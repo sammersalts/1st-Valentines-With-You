@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(137, 207, 240);
+    text-align: center;
+    padding: 80px 20px;
+    flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.message_container {
+    position: relative;
+    background: white;
+    border-radius: 25px;
+    padding: 50px;
+    width: 80vw;
+    max-width: 900px;
+    box-shadow: 0px 10px 30px rgba(255, 182, 193, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+    margin: 40px 0;
+    overflow: hidden; /* Ensures hearts stay inside */
+}
+
+.message_title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 32px;
+    color: #ff5c97;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 92, 151, 0.3);
+}
+
+.message_text {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 20px;
+    background: rgba(255, 240, 245, 0.5);
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 8px rgba(255, 182, 193, 0.3);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-150px) scale(1.5); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    background-color: #ff5c97;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    animation: floatUp 4s linear infinite;
+    opacity: 0.8;
+}
+
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff5c97;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    left: -10px;
+    top: 0;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 0.5s; }
+
+.audio_container {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 182, 193, 0.3);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(255, 182, 193, 0.4);
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
